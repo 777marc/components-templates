@@ -93,6 +93,7 @@ input:not([type='checkbox']) {
     padding: 10px;
     margin: 20px 0;
     width: 100%;
+    cursor: pointer;
 }
 
 .btn img {
