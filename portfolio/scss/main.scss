@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
-
 @import "config";
 @import "menu";
 @import "mobile";
@@ -11,10 +9,10 @@
 body {
   @include background();
   background: $primary-color;
-  color: #fff;
+  color: set-text-color($primary-color);
   height: 100vh;
   margin: 0;
-  font-family: "Source Sans Pro", "sans-serif";
+  font-family: "Roboto Mono", monospace;
   line-height: 1.5;
 }
 
@@ -36,7 +34,7 @@ h3 {
 }
 
 a {
-  color: #fff;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
@@ -73,4 +71,30 @@ main {
       margin-top: 20vh;
     }
   }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, ifr);
+}
+
+.bio-image {
+  grid-area: bioimage;
+}
+
+.bio {
+  grid-area: bio;
+}
+
+.job-1 {
+  grid-area: job1;
+}
+
+.job-2 {
+  grid-area: job2;
+}
+.job-3 {
+  grid-area: job3;
 }

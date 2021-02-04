@@ -1,5 +1,7 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+$primary-color: #445;
+$secondary-color: #d6b917;
 $show-home-image: true;
 $home-image: url(../img/home.jpg);
 $background-opacity: 0.9;
@@ -26,6 +28,15 @@ $background-opacity: 0.9;
         background: rgba($primary-color, $background-opacity);
       }
     }
+  }
+}
+
+// set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #191919;
+  } @else {
+    @return #e5e5e5;
   }
 }
 
